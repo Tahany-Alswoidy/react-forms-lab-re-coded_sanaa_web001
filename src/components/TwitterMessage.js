@@ -4,10 +4,12 @@ class TwitterMessage extends React.Component {
   constructor() {
     super();
 
-    this.state = {  message: "",};
+    this.state = {
+      message: "",
+    };
   }
 
- handleMessageChange = (event) => {
+  handleMessageChange = (event) => {
     this.setState({
       message: event.target.value,
     });
@@ -20,7 +22,6 @@ class TwitterMessage extends React.Component {
   remainingCharsBox = (remainingChars) => {
     return <div>{remainingChars}</div>;
   };
-
 
   render() {
     return (
