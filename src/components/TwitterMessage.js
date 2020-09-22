@@ -7,6 +7,21 @@ class TwitterMessage extends React.Component {
     this.state = {  message: "",};
   }
 
+ handleMessageChange = (event) => {
+    this.setState({
+      message: event.target.value,
+    });
+  };
+
+  remainingChars = (message, charsNumbers) => {
+    return charsNumbers - message.split("").length;
+  };
+
+  remainingCharsBox = (remainingChars) => {
+    return <div>{remainingChars}</div>;
+  };
+
+
   render() {
     return (
       <div>
