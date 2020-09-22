@@ -5,12 +5,10 @@ class LoginForm extends React.Component {
     super();
 
     this.state = {
-      this.state = {
       username: "",
       password: "",
     };
   }
-  
   handleInputChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
@@ -21,14 +19,13 @@ class LoginForm extends React.Component {
     if (this.state.username === "" || this.state.password === "") return;
     this.props.handleLogin(this.state);
   };
-
   render() {
     return (
-     <form onSubmit={(event) => this.handleSubmit(event)}>
+      <form onSubmit={(event) => this.handleSubmit(event)}>
         <div>
           <label>
             Username
-             <input
+            <input
               id="username"
               name="username"
               type="text"
